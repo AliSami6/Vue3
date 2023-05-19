@@ -3,6 +3,7 @@ new Vue({
     data: {
         title :"Web And Vue",
         desc :"long term course",
+        dur :"6 months",
         learning_meta: "bootstrap5  Html5 css3 jquery javascript sql php",
         viva:['join sql','request life cycle'],
         written:{
@@ -13,6 +14,9 @@ new Vue({
     methods: {
         greeting(){
             return this.desc;
+        },
+        summer(){
+            return this.dur;
         }
     }
 })
