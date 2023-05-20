@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conditional rendering</title>
+    <title>directives v-show</title>
      <script src="vue.js"></script>
 </head>
 <body>
-    <h3>conditional rendering</h3>
+    <h3>directives v-show</h3>
     <div id="app">
-       
-       <p v-if="changeUser()">
-         you are allowed
+       <p v-show="user==='Jara'">
+          show it
        </p>
-      
-       <p v-else>
-          you are not allowed
+       <p v-show="user!=='Jara'">
+          do not show it
        </p>
     </div>
       <script src="render.js"></script>

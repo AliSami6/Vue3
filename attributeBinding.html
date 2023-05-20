@@ -11,8 +11,11 @@
     <h3>v-binding</h3>
     <div id="app">
        
-        <img :src="imageSrc" v-bind:alt="alt" height="400" width="700"><br>
+        <img  v-bind:src="imageSrc" v-bind:alt="alt" height="400" width="700"><br>
         <a v-bind:href="link" target="_blank">click </a>
+        <hr>
+        <p v-text="my_text"></p>
+        <span v-html="myHtml"></span>
     </div>
       <script src="myapp.js"></script>
 </body>
