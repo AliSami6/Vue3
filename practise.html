@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-model</title>
+     <script src="vue.js"></script>
+</head>
+<body>
+
+<h2>V-model</h2>
+    <div id="app">
+        <form v-on:submit.prevent="handleForm">
+        <label for="fname">First name:</label><br>
+        <input type="text" v-model="formData.firstName" ><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" v-model="formData.lastName"><br><br>
+        <input type="submit" value="Submit">
+        </form> 
+    </div>
+<script src="model.js"></script>
+</body>
+</html>
+
