@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <h3>Event</h3>
+    <div id="app">
+        <h2>{{name}}</h2>
+        <button v-on:click="updateName">Click me</button>
+
+        <hr>
+        <p>--------------</p>
+        <br>
+        <div v-on:mousemove="getCoord" class="box">
+           hover me
+        </div>
+        <p>X: {{x}}</p>
+        <p>Y: {{y}}</p>
+    </div>
+
+    <script src="en.js"></script>
+</body>
+<style>
+    .box{
+        background-color: red;
+        width:400px;
+        height:400px;
+    }
+</style>
+</html>
