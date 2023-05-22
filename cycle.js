@@ -3,6 +3,14 @@ new Vue({
   data : {
     name : 'Adnan'
   },
+  methods:{
+    updateName(){
+       return this.name = 'Adnan Sami'
+    },
+    kill(){
+       this.$destroy();
+    }
+  },
   beforeCreate() {
     console.log('Running before create');
   },
@@ -15,4 +23,17 @@ new Vue({
   mounted() {
     console.log('mounted');
   },
+  beforeUpdate() {
+    console.log('before updated');
+  },
+  updated() {
+    console.log('updated');
+  },
+  beforeDestroy() {
+    console.log('before destroy');
+  },
+  destroyed(){
+    console.log('destroyed');
+  }
+
 });
