@@ -1,11 +1,10 @@
 <template>
     <div>
-       new Header
-      <ul>
-         <li v-for="stu in myStudents" :key="stu">
-            {{stu}}
-         </li>
-      </ul>
+      
+      <p>First Name : {{ Fname }}</p>
+      <p>Last Name : {{ Lname }}</p>
+      <p>Age  : {{ YourAge }}</p>
+      <button @click="updateName">click me</button>
     </div>
 </template>
 <script >
@@ -14,10 +13,15 @@
 export default ({
    
      props : {
-       myStudents : {
-         type : Array,
-         required : true
-       }
+       Fname: String,
+       Lname : String,
+       YourAge : Number
+      },
+      methods: {
+         updateName(){
+           // this.Fname = "Adnan";
+           this.$emit('updateValue','Adnan');
+         }
       }
   
 })
