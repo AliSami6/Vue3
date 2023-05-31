@@ -1,39 +1,44 @@
 <template>
-  <div>
-      <app-header 
-       :Fname="fName"
-       :Lname="lName"
-       :YourAge="myAge"
-       @updateValue="fName=$event"
-      />
-    <app-footer/>
-   
-</div>
-
+    <div class="container">
+      <div class="row">
+        <comListhelper>
+          <ul slot="listItem">
+            <li v-for="li in list" :key="li">
+              {{li}}
+            </li>
+          </ul>
+          <p slot="para"> this is a paragraph</p>
+          <p :slot="loader">See you again</p>
+        </comListhelper>
+        <comListForms>
+          this is form
+        </comListForms>
+      </div>
+    </div>
 </template>
 <script>
-import Header from './Components/partials/ProjectHeaders.vue'
-import Footer from './Components/partials/ProjectFooters.vue'
-export default {
-  data() {
+import comListhelper from './Components/ListHelper'
+import comListForms from './Components/ListFormsHelper'
+export default{
+  data(){
     return {
-      fName : 'Ali ',
-      lName : "Sami",
-      myAge : 25
+      list : ['HTML','CSS','Javascript'],
+      loader : ''
     }
   },
-  components: {
-   'app-header' : Header,
-   'app-footer' : Footer
+  components :{
+    comListhelper,
+    comListForms
+  },
+  created(){
+    setTimeout(()=>{
+      this.loader = 'other';
+    },5000)
   }
 }
 </script>
-
- <style>
-      body{
-        font-family: 'Roboto', sans-serif;
-      }
-      #app{
-        padding-left:10px;
-      }
-    </style>
+<style>
+ ul li{
+  list-style: none;
+ }
+</style>
