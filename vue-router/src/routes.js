@@ -8,6 +8,6 @@ export const routes = [
   },
   {
     path : '/customer',
-    componernt: compCustomer
+    component: compCustomer
   }
 ];
