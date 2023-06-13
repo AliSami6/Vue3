@@ -6,7 +6,8 @@ import compCustomerEdit from './components/Customers/CustomerEdit.vue'
 export const routes = [
   {
     path :'',
-    component: compHome
+    component: compHome,
+    name:'home'
   },
   {
     path : '/customer',
@@ -22,7 +23,8 @@ export const routes = [
       },
       {
         path :':id/edit',
-        component: compCustomerEdit
+        component: compCustomerEdit,
+        name:'compCustomerEdit'
       }
     ]
   }
