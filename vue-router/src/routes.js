@@ -27,5 +27,9 @@ export const routes = [
         name:'compCustomerEdit'
       }
     ]
+  },
+  {
+    path:'*',
+    component:compHome
   }
 ];
