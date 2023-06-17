@@ -2,7 +2,7 @@
     <div id="book-list-one">
         <h2>Book List One</h2>
         <ul>
-            <li v-for="(b,id) in book" :key="id">
+            <li v-for="(b,id) in sellBooks" :key="id">
                 <span class="name">{{b.name}}</span>
                 <span class="price">${{b.price}}</span>
             </li>
@@ -11,12 +11,15 @@
 </template>
 
 <script>
-
+import {mapGetters} from 'vuex';
 export default {
    computed:{
     book(){
         return this.$store.state.books;
-    }
+    },
+    ...mapGetters([
+        'sellBooks'
+    ])
    }
    
 }
